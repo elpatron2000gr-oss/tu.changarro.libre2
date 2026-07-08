@@ -26,7 +26,7 @@ function Input({ value, onChange, placeholder, type='text', style={} }) {
   )
 }
 
-function GBtn({ children, onClick, disabled, full, grad }) {
+function GBtn({ children, onClick, disabled, full, grad = null }: any) {
   return (
     <button onClick={onClick} disabled={disabled} style={{ width:full?'100%':'auto', padding:'13px 20px', borderRadius:14, border:'none', background:disabled?'#444':(grad||G), color:'#0a0a0a', fontWeight:700, fontSize:15, cursor:disabled?'not-allowed':'pointer', fontFamily:T.font, display:'flex', alignItems:'center', justifyContent:'center', gap:8 }}>
       {children}
